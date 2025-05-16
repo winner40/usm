@@ -1,0 +1,1 @@
+/usr/bin/clang -O3 -DNDEBUG CMakeFiles/executable_with_syscall_no_pie.dir/executable_with_syscall.S.o -o executable_with_syscall_no_pie  -nopie 

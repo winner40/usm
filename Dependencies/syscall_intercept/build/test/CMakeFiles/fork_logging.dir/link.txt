@@ -1,0 +1,1 @@
+/usr/bin/clang  -Werror -Wall -Wextra -pedantic -Wno-missing-field-initializers -O3 -DNDEBUG -rdynamic CMakeFiles/fork_logging.dir/fork_logging.c.o -o fork_logging 

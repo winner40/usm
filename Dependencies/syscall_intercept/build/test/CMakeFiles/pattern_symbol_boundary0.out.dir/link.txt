@@ -1,0 +1,1 @@
+/usr/bin/clang -fPIC -O3 -DNDEBUG -nostdlib -shared  -o libpattern_symbol_boundary0.out.so CMakeFiles/pattern_symbol_boundary0.out.dir/pattern_symbol_boundary0.out.S.o 

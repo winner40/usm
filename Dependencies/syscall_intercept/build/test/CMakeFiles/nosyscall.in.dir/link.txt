@@ -1,0 +1,1 @@
+/usr/bin/clang -fPIC -O3 -DNDEBUG -nostdlib -shared  -o libnosyscall.in.so CMakeFiles/nosyscall.in.dir/nosyscall.in.S.o 

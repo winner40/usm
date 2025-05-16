@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -rdynamic CMakeFiles/cpp_test.dir/src/cpp_compile_test.cc.o CMakeFiles/cpp_test.dir/src/cpp_compile_mock.c.o -o cpp_test   -L/usr/lib/llvm-14/lib 

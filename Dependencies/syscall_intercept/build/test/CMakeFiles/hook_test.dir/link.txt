@@ -1,0 +1,1 @@
+/usr/bin/clang  -Werror -Wall -Wextra -pedantic -Wno-missing-field-initializers -O3 -DNDEBUG -rdynamic CMakeFiles/hook_test.dir/hook_test.c.o -o hook_test 

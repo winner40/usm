@@ -1,0 +1,8 @@
+/usr/lib/x86_64-linux-gnu/libsyscall_intercept.so.0.1.0
+/usr/lib/x86_64-linux-gnu/libsyscall_intercept.so.0
+/usr/lib/x86_64-linux-gnu/libsyscall_intercept.so
+/usr/include/libsyscall_intercept_hook_point.h
+/usr/lib/x86_64-linux-gnu/libsyscall_intercept.a
+/usr/include/libsyscall_intercept_hook_point.h
+/usr/lib/x86_64-linux-gnu/pkgconfig/libsyscall_intercept.pc
+/usr/share/man/man3/libsyscall_intercept.3

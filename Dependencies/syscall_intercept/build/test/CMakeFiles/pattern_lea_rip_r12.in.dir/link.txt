@@ -1,0 +1,1 @@
+/usr/bin/clang -fPIC -O3 -DNDEBUG -nostdlib -shared  -o libpattern_lea_rip_r12.in.so CMakeFiles/pattern_lea_rip_r12.in.dir/pattern_lea_rip_r12.in.S.o 

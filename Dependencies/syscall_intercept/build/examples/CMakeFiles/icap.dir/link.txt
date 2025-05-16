@@ -1,0 +1,1 @@
+/usr/bin/clang -fPIC  -Werror -Wall -Wextra -pedantic -Wno-missing-field-initializers -O3 -DNDEBUG -shared -Wl,-soname,libicap.so -o libicap.so CMakeFiles/icap.dir/icap.c.o  -Wl,-rpath,/home/jocelyn/Bureau/flusm-devBugs-SwpMods/flusm-devBugs/Dependencies/syscall_intercept/build ../libsyscall_intercept.so.0.1.0 

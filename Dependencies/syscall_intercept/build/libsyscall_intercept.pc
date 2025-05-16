@@ -1,0 +1,13 @@
+prefix=/usr
+libdir=/usr/lib/x86_64-linux-gnu
+version=
+includedir=/usr/include
+
+Name: libsyscall_intercept
+Description: libsyscall_intercept - system call intercepting library
+Version: 
+URL: http://github.com/pmem/syscall_intercept
+Requires.private: capstone
+Libs: -L/usr/lib/x86_64-linux-gnu -lsyscall_intercept
+Libs.private: -ldl
+Cflags: -I/usr/include

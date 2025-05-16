@@ -1,0 +1,1 @@
+/usr/bin/clang -fPIC -O3 -DNDEBUG -nostdlib -shared  -o libpattern_jmps.in.so CMakeFiles/pattern_jmps.in.dir/pattern_jmps.in.S.o 

@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "usm_entete.h": "c",
+        "usm.h": "c",
+        "stat.h": "c"
+    }
+}

@@ -1,0 +1,1 @@
+/usr/bin/clang -fPIC -O3 -DNDEBUG -nostdlib -shared  -o libpattern_endbr64.out.so CMakeFiles/pattern_endbr64.out.dir/pattern_endbr64.out.S.o 

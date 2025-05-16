@@ -1,0 +1,1 @@
+/usr/bin/clang -fPIC -O3 -DNDEBUG -nostdlib -shared  -o libpattern_nop_padding8.in.so CMakeFiles/pattern_nop_padding8.in.dir/pattern_nop_padding8.in.S.o 

@@ -1,0 +1,1 @@
+/usr/bin/clang  -Werror -Wall -Wextra -pedantic -Wno-missing-field-initializers -O3 -DNDEBUG -rdynamic CMakeFiles/check_license_executable.dir/utils/check_license/check-license.c.o -o check_license_executable 

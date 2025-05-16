@@ -1,0 +1,1 @@
+/usr/bin/clang -fPIC  -Werror -Wall -Wextra -pedantic -Wno-missing-field-initializers -O3 -DNDEBUG -shared -Wl,-soname,libintercept_sys_write.so -o libintercept_sys_write.so CMakeFiles/intercept_sys_write.dir/intercept_sys_write.c.o  -Wl,-rpath,/home/jocelyn/Bureau/flusm-devBugs-SwpMods/flusm-devBugs/Dependencies/syscall_intercept/build ../libsyscall_intercept.so.0.1.0 

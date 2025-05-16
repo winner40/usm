@@ -1,0 +1,1 @@
+/usr/bin/clang  -Werror -Wall -Wextra -pedantic -Wno-missing-field-initializers -O3 -DNDEBUG -rdynamic CMakeFiles/vfork_logging.dir/vfork_logging.c.o -o vfork_logging 

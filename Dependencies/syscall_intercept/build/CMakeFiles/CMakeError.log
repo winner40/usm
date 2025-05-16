@@ -1,0 +1,22 @@
+Checking whether the ASM compiler is GNU using "--version" did not match "(GNU assembler)|(GCC)|(Free Software Foundation)":
+Ubuntu clang version 14.0.0-1ubuntu1.1
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Performing C SOURCE FILE Test HAS_NO9099 failed with the following output:
+Change Dir: /home/jocelyn/Bureau/flusm-devBugs-SwpMods/flusm-devBugs/Dependencies/syscall_intercept/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_11c00/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_11c00.dir/build.make CMakeFiles/cmTC_11c00.dir/build
+gmake[1]: Entering directory '/home/jocelyn/Bureau/flusm-devBugs-SwpMods/flusm-devBugs/Dependencies/syscall_intercept/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_11c00.dir/src.c.o
+/usr/bin/clang -DHAS_NO9099  -Wno-c90-c99-compat -MD -MT CMakeFiles/cmTC_11c00.dir/src.c.o -MF CMakeFiles/cmTC_11c00.dir/src.c.o.d -o CMakeFiles/cmTC_11c00.dir/src.c.o -c /home/jocelyn/Bureau/flusm-devBugs-SwpMods/flusm-devBugs/Dependencies/syscall_intercept/build/CMakeFiles/CMakeTmp/src.c
+warning: unknown warning option '-Wno-c90-c99-compat'; did you mean '-Wno-c99-compat'? [-Wunknown-warning-option]
+1 warning generated.
+Linking C executable cmTC_11c00
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11c00.dir/link.txt --verbose=1
+/usr/bin/clang -rdynamic CMakeFiles/cmTC_11c00.dir/src.c.o -o cmTC_11c00 
+gmake[1]: Leaving directory '/home/jocelyn/Bureau/flusm-devBugs-SwpMods/flusm-devBugs/Dependencies/syscall_intercept/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }

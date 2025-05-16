@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsyscall_intercept.a syscall_intercept_scoped.o
+/usr/bin/ranlib libsyscall_intercept.a

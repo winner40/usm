@@ -1,0 +1,1 @@
+/usr/bin/clang -fPIC -O3 -DNDEBUG -nostdlib -shared  -o libpattern3.out.so CMakeFiles/pattern3.out.dir/pattern3.out.S.o 

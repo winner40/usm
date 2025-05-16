@@ -1,0 +1,1 @@
+/usr/bin/clang  -Werror -Wall -Wextra -pedantic -Wno-missing-field-initializers -O3 -DNDEBUG -rdynamic CMakeFiles/test_clone_thread.dir/test_clone_thread.c.o -o test_clone_thread 
