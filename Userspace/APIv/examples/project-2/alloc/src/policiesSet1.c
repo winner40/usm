@@ -956,7 +956,7 @@ static inline int basic_alloc_hint(struct usm_event *event) {
     pthread_mutex_lock(&policiesSet1lock);
 
     if (list_empty(&freeList)) {
-        printf("[FHP] ❌ Échec : freeList vide\n");
+        printf("[FHP] Échec : freeList vide\n");
         pthread_mutex_unlock(&policiesSet1lock);
         return 1;
     }
@@ -967,13 +967,13 @@ static inline int basic_alloc_hint(struct usm_event *event) {
     if (fhp && fhp->allocated == 0) {
         // Vérifier qu'on a assez de pages libres pour toute la FHP
         if (list_count_nodes(&freeList) < fhp->pages) {
-            printf("[FHP] ❌ Pas assez de pages libres pour allouer FHP (disponibles=%ld, requis=%d)\n",
+            printf("[FHP] Pas assez de pages libres pour allouer FHP (disponibles=%ld, requis=%d)\n",
                    list_count_nodes(&freeList), fhp->pages);
             pthread_mutex_unlock(&policiesSet1lock);
             return 1;
         }
 
-        printf("[FHP] ✅ Hint détecté : allocation groupée de %d pages pour le processus %d à partir de %p\n",
+        printf("[FHP] Hint détecté : allocation groupée de %d pages pour le processus %d à partir de %p\n",
                fhp->pages, event->origin, (void*)fhp->base);
 
         for (int i = 0; i < fhp->pages; i++) {
@@ -984,7 +984,7 @@ static inline int basic_alloc_hint(struct usm_event *event) {
             usedMemory += globalPageSize;
 
             if (freeListNode->usmPage == NULL) {
-                printf("[FHP] ❌ Page NULL lors de l’allocation\n");
+                printf("[FHP] Page NULL lors de l’allocation\n");
                 pthread_mutex_unlock(&policiesSet1lock);
                 return 1;
             }
@@ -1007,7 +1007,7 @@ static inline int basic_alloc_hint(struct usm_event *event) {
             pthread_mutex_unlock(&procDescList[temp_evt.origin].alcLock);
 
             if (usmSubmitAllocEvent(&temp_evt)) {
-                printf("[FHP] ❌ usmSubmitAllocEvent a échoué pour vaddr=%p\n", (void *)vaddr);
+                printf("[FHP] usmSubmitAllocEvent a échoué pour vaddr=%p\n", (void *)vaddr);
                 pthread_mutex_unlock(&policiesSet1lock);
                 return 1;
             }
@@ -1019,12 +1019,12 @@ static inline int basic_alloc_hint(struct usm_event *event) {
 
         fhp->allocated = 1;
         pthread_mutex_unlock(&policiesSet1lock);
-        printf("[FHP] ✅ Allocation complète terminée pour FHP\n");
+        printf("[FHP] Allocation complète terminée pour FHP\n");
         return 0;
     }
 
     // Cas 2 : Pas de hint → comportement normal
-    printf("[FHP] ℹ️ Aucun hint trouvé, fallback allocation classique\n");
+    printf("[FHP] Aucun hint trouvé, fallback allocation classique\n");
 
     struct optEludeList *freeListNode = list_first_entry(&freeList, struct optEludeList, iulist);
     list_move(&freeListNode->iulist, &usedList);
@@ -1049,11 +1049,11 @@ static inline int basic_alloc_hint(struct usm_event *event) {
     pthread_mutex_unlock(&policiesSet1lock);
 
     if (usmSubmitAllocEvent(event)) {
-        printf("[FHP] ❌ usmSubmitAllocEvent a échoué (fallback)\n");
+        printf("[FHP] usmSubmitAllocEvent a échoué (fallback)\n");
         return 1;
     }
 
-    printf("[FHP] ✅ Fallback allocation : vaddr=%p -> paddr=%lu\n", (void *)event->vaddr, event->paddr);
+    printf("[FHP] Fallback allocation : vaddr=%p -> paddr=%lu\n", (void *)event->vaddr, event->paddr);
     return 0;
 }
 
